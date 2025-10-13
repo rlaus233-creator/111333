@@ -1,0 +1,576 @@
+<!DOCTYPE ahtml>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 검색 엔진 최적화 (SEO) 강화 -->
+    <title>AIO KOREA | AIO : AI 시대 차세대 브랜드 전략 및 최적화 솔루션</title>
+
+    <!-- 네이버 검색 최적화(Naver Search Advisor) 및 일반 SEO 태그 강화 -->
+    <meta name="description"
+        content="AI 시대, ChatGPT와 Gemini 등 생성형 AI 답변에 브랜드를 최적화하여 경쟁사보다 먼저, 오래 노출시키는 차세대 AIO(AI Optimization) 솔루션을 경험해보세요. 초기 시장 선점으로 장기적인 비용 효율을 극대화합니다.">
+    <meta name="keywords" content="AIO, SEO, AI 최적화, 인공지능 마케팅, AI 브랜드 전략, 네이버 SEO, ChatGPT 최적화, Gemini 최적화">
+    <meta name="author" content="AIO KOREA">
+
+    <!-- Open Graph (OG) Tag: SNS 공유 최적화 -->
+    <meta property="og:title" content="AIO KOREA | AI 브랜드 최적화 솔루션">
+    <meta property="og:description"
+        content="AI 시대, ChatGPT와 Gemini 등 생성형 AI 답변에 브랜드를 최적화하여 경쟁사보다 먼저, 오래 노출시키는 차세대 AIO 솔루션">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aio-korea.com"> <!-- 실제 도메인으로 변경 필요 -->
+    <!-- og:image 태그는 시각적 이미지 URL로 변경 필요 -->
+    <meta property="og:image" content="https://placehold.co/1200x630/0e123a/ffffff?text=AIO+KOREA+Thumbnail">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Inter 폰트 사용 설정 */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            /* Light Slate */
+        }
+
+        /* AI/기술 테마 색상 정의 */
+        .ai-primary-bg {
+            background-color: #0e123a;
+        }
+
+        /* Deep Dark Blue */
+        .ai-accent-text {
+            color: #38bdf8;
+        }
+
+        /* Vibrant Sky Blue */
+        .ai-accent-bg {
+            background-color: #38bdf8;
+        }
+
+        .ai-card-bg {
+            background-color: #ffffff;
+        }
+
+        /* 커스텀 버튼 스타일링 */
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+        }
+
+        .cta-button:hover {
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.7);
+            transform: translateY(-2px);
+        }
+
+        /* 카카오톡 버튼 스타일 추가 */
+        .kakao-button {
+            background-color: #fee500;
+            color: #191919;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .kakao-button:hover {
+            background-color: #e0d000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 네이버 사이트 링크 및 정보 제공을 위한 JSON-LD 구조적 마크업 -->
+    <!-- 네이버 서치어드바이저의 '사이트 링크' 노출에 도움을 줄 수 있습니다. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AIO KOREA",
+      "url": "https://www.aio-korea.com",
+      "potentialAction": [{
+        "@type": "SearchAction",
+        "target": "https://www.aio-korea.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },{
+        "@type": "Action",
+        "name": "무료 상담 신청",
+        "target": "https://www.aio-korea.com/#contact"
+      }]
+    }
+    </script>
+
+
+    <!-- 헤더 / 네비게이션 -->
+    <header class="ai-primary-bg text-white shadow-lg z-50 sticky top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold tracking-tight">
+                AIO <span class="ai-accent-text">KOREA</span>
+            </h1>
+            <nav class="flex items-center space-x-3">
+                <!-- 인스타그램 SNS 링크 버튼 추가 -->
+                <a href="https://instagram.com/aio_korea_official" target="_blank" rel="noopener noreferrer"
+                    class="p-2 rounded-full border border-white hover:bg-white hover:text-gray-900 transition duration-300">
+                    <!-- Instagram SVG Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-instagram">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg>
+                </a>
+
+                <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+                    class="px-4 py-2 text-sm font-semibold rounded-full border border-white hover:bg-white hover:text-gray-900 transition duration-300">
+                    무료 상담
+                </button>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- 프로모션 비디오 섹션 (New Section) - 전체화면 및 자동 재생 (Full Screen Optimized) -->
+    <section id="hero-video" class="relative min-h-[100svh] md:h-screen flex items-center justify-center overflow-hidden 
+         pt-[calc(env(safe-area-inset-top)+64px)] pb-[env(safe-area-inset-bottom)]">
+
+        <video class="absolute inset-0 z-0 w-full h-full object-cover" autoplay loop muted playsinline
+            preload="metadata">
+            <!-- 기본 (가로 16:9) 먼저 -->
+            <source src="videos/aio-korea-promo.mp4" media="(min-aspect-ratio: 9/16)">
+            <!-- 세로 전용 나중에 -->
+            <source src="videos/aio-korea-promo-vertical.mp4" media="(max-aspect-ratio: 9/16)">
+
+        </video>
+
+
+
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 z-10 w-full h-full bg-black/55 md:bg-black/45"></div>
+
+
+
+
+
+        <!-- Content Overlay (z-20) - 중앙 정렬 -->
+        <div class="z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h3 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 drop-shadow-lg">
+                <span class="ai-accent-text">AI의 시대,</span> AIO로 대비하다!
+            </h3>
+
+            <p class="absolute bottom-6 left-1/2 -translate-x-1/2 
+            text-xs sm:text-sm md:text-base text-red-400 font-bold tracking-widest 
+            border-b border-red-400 pb-2 inline-block drop-shadow-lg bg-black/40 px-3 rounded-md">
+                🚨 AI는 먼저 본 브랜드를 기준으로 자주 노출됩니다.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- AIO 정의 및 필요성 섹션 (New Section) -->
+    <section class="py-20 sm:py-28 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-12">
+                AIO란 무엇인가요?
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                <!-- AIO 정의 (간결화) -->
+                <div>
+                    <h4 class="text-2xl font-bold mb-4 ai-accent-text">AIO (Artificial Intelligence Optimization)</h4>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        AIO는 생성형 AI(ChatGPT, Gemini 등)가 브랜드를 정확히 인지하고 답변 시 자연스럽게 노출하도록 설계하는 차세대 노출 전략입니다.
+
+                        단순 광고를 넘어, AI의 대화, 요약, 추천 기능 속에 브랜드를 반복 노출하는 구조를 구축합니다.
+                    </p>
+                    <p
+                        class="text-gray-700 text-lg leading-relaxed font-semibold border-l-4 border-sky-400 pl-4 py-1 bg-sky-50/50">
+                        AI가 기억하는 브랜드의 최초 기준을 선점하도록 설계합니다.
+                    </p>
+                </div>
+
+                <!-- 왜 지금인가 (시각적 개선 및 간결화) -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg border-l-4 border-sky-400">
+                    <h4 class="text-2xl font-bold mb-6 text-gray-900">왜 지금 AIO가 필수인가요?</h4>
+                    <ul class="space-y-6 text-gray-700">
+                        <li class="flex items-center">
+                            <span class="text-3xl ai-accent-text mr-4">🚀</span>
+                            <div>
+                                <strong class="font-extrabold text-gray-900 text-xl">선점 효과</strong>
+                                <p class="text-gray-600 mt-0.5">AI 대화의 최초 기준을 선점하여 장기간 브랜드 메시지를 유지합니다.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-3xl ai-accent-text mr-4">🧠</span>
+                            <div>
+                                <strong class="font-extrabold text-gray-900 text-xl">신뢰도 축적</strong>
+                                <p class="text-gray-600 mt-0.5">여러 AI 채널에서 정보가 반복 학습되어 브랜드의 공신력을 강화합니다.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-3xl ai-accent-text mr-4">⏱️</span>
+                            <div>
+                                <strong class="font-extrabold text-gray-900 text-xl">비용 절감</strong>
+                                <p class="text-gray-600 mt-0.5">선점 실패 시 추격 비용이 기하급수적으로 증가합니다. 오늘이 가장 저렴합니다.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 새로운 섹션: AI 정보 생태계의 변화와 AIO의 당위성 -->
+    <section class="py-20 sm:py-28 ai-primary-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Headline -->
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-center mb-4">
+                🌍 2025년, AI가 주도하는 정보 생태계
+            </h3>
+            <p class="text-xl text-gray-400 text-center mb-16 max-w-3xl mx-auto">
+                “검색창이 닫히고, 대화창이 열렸다.” 이제는 AI에게 묻고, AI는 기억 속 브랜드를 답합니다.
+
+            </p>
+
+
+            <!-- Data Grid (2025 데이터 기반) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10 text-center">
+                <!-- Data Point 1 -->
+                <div class="ai-card-bg p-6 rounded-xl shadow-lg border-b-4 border-sky-400">
+                    <p class="text-3xl sm:text-4xl font-extrabold ai-accent-text mb-1">+181%</p>
+                    <p class="text-sm text-gray-700 font-semibold">AI 답변 기반 검색 증가율</p>
+                </div>
+                <!-- Data Point 2 -->
+                <div class="ai-card-bg p-6 rounded-xl shadow-lg border-b-4 border-sky-400">
+                    <p class="text-3xl sm:text-4xl font-extrabold ai-accent-text mb-1">47%</p>
+                    <p class="text-sm text-gray-700 font-semibold">ChatGPT 사용자 중 AI 검색만 사용</p>
+                </div>
+                <!-- Data Point 3 -->
+                <div class="ai-card-bg p-6 rounded-xl shadow-lg border-b-4 border-sky-400">
+                    <p class="text-3xl sm:text-4xl font-extrabold ai-accent-text mb-1">+117%</p>
+                    <p class="text-sm text-gray-700 font-semibold">기업 브랜드의 AI 언급률 증가</p>
+                </div>
+                <!-- Data Point 4 -->
+                <div class="ai-card-bg p-6 rounded-xl shadow-lg border-b-4 border-sky-400">
+                    <p class="text-3xl sm:text-4xl font-extrabold ai-accent-text mb-1">+133%</p>
+                    <p class="text-sm text-gray-700 font-semibold">AI 검색에서의 브랜드 전환률 증가</p>
+                </div>
+            </div>
+            <p class="text-xs text-gray-500 text-center mb-16">
+                *출처: AIO Insight Research Lab, 2025 Global AI Usage Report (독자 분석 데이터)
+            </p>
+
+        </div>
+    </section>
+
+    <!-- AIO vs SEO 심층 비교 섹션 (New Section based on Image data) -->
+    <section class="py-20 sm:py-28 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-4">
+                SEO vs AIO 무엇이 다른가요?
+            </h3>
+            <p class="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto">
+                SEO는 검색 엔진 최적화, AIO는 AI 답변 최적화. 브랜드 노출의 방식 자체가 진화했습니다.
+            </p>
+
+            <!-- Comparison Table / Grid -->
+            <div class="bg-gray-100 p-2 rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto">
+                <!-- Comparison Header -->
+                <div class="grid grid-cols-3 font-extrabold text-lg text-white rounded-t-xl ai-primary-bg py-4 px-6">
+                    <div class="text-center">구분</div>
+                    <div class="text-center bg-sky-600 rounded-lg py-1 mx-1 sm:mx-2">SEO의 경우</div>
+                    <div class="text-center bg-sky-400 rounded-lg py-1 mx-1 sm:mx-2">AIO의 경우</div>
+                </div>
+
+                <!-- Comparison Rows -->
+                <!-- Row 1: 타겟 -->
+                <div
+                    class="grid grid-cols-3 items-center border-b border-gray-200 py-4 px-6 hover:bg-gray-50 transition">
+                    <div class="font-bold text-gray-800 text-sm sm:text-base">타겟</div>
+                    <div class="text-center text-gray-600 text-sm sm:text-base">검색 엔진 (구글, 네이버 등)</div>
+                    <div class="text-center font-semibold ai-accent-text text-sm sm:text-base">AI 엔진 (GPT, Gemini 등)
+                    </div>
+                </div>
+
+                <!-- Row 2: 경쟁도 -->
+                <div
+                    class="grid grid-cols-3 items-center border-b border-gray-200 py-4 px-6 hover:bg-gray-50 transition">
+                    <div class="font-bold text-gray-800 text-sm sm:text-base">경쟁도</div>
+                    <div class="text-center text-red-600 font-bold text-sm sm:text-base">매우 높음 (광고비 추가 발생)</div>
+                    <div class="text-center text-green-600 font-bold text-sm sm:text-base">아직 낮음 (초기 시장 선점 가능)</div>
+                </div>
+
+                <!-- Row 3: 비용 (간소화) -->
+                <div
+                    class="grid grid-cols-3 items-center border-b border-gray-200 py-4 px-6 hover:bg-gray-50 transition">
+                    <div class="font-bold text-gray-800 text-sm sm:text-base">초기 투자 비용</div>
+                    <div class="text-center text-gray-600 text-sm sm:text-base">200~1000만원+</div>
+                    <div class="text-center text-gray-600 text-sm sm:text-base">0~500만원 </div>
+                </div>
+
+                <!-- Row 4: 결과 방식 -->
+                <div
+                    class="grid grid-cols-3 items-center border-b border-gray-200 py-4 px-6 hover:bg-gray-50 transition">
+                    <div class="font-bold text-gray-800 text-sm sm:text-base">결과 방식</div>
+                    <div class="text-center text-gray-600 text-sm sm:text-base">검색 최적화 노출</div>
+                    <div class="text-center font-semibold ai-accent-text text-sm sm:text-base">AI 답변 노출</div>
+                </div>
+
+                <!-- Row 5: 비고 / 핵심 메시지 -->
+                <div
+                    class="grid grid-cols-3 items-center py-4 px-6 bg-yellow-50 rounded-b-xl border-t-2 border-yellow-200">
+                    <div class="font-bold text-gray-800 text-sm sm:text-base">핵심 비고</div>
+                    <div class="text-center text-gray-600 text-sm sm:text-base">많은 비용 지불시 상위 노출 가능</div>
+                    <div class="text-center font-bold text-gray-900 text-sm sm:text-base">
+                        <strong class="text-sky-600">적은 비용으로도 노출가능 </strong>선점이 중요
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+    <!-- 핵심 혜택 섹션 -->
+    <section class="py-20 sm:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-16">
+                AIO KOREA만의 <span class="ai-accent-text">3가지 핵심 혜택</span>
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- 혜택 1 -->
+                <div
+                    class="ai-card-bg p-8 rounded-2xl shadow-xl transform hover:scale-[1.02] transition duration-300 border border-gray-100">
+                    <div class="text-4xl ai-accent-text mb-4">💰</div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-900">셋팅비 없이 시작 가능</h4>
+                    <p class="text-gray-600">
+                        초기 부담 없이, <span class="text-red-500 font-semibold">즉시 AI 최적화 프로젝트를 시작</span>할 수 있습니다.<br>
+                        모든 브랜드가 공평하게 AIO의 효과를 검증할 수 있도록 설계된 합리적 구조입니다.
+                    </p>
+                </div>
+
+                <!-- 혜택 2 -->
+                <div
+                    class="ai-card-bg p-8 rounded-2xl shadow-xl transform hover:scale-[1.02] transition duration-300 border border-gray-100">
+                    <div class="text-4xl ai-accent-text mb-4">🎯</div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-900">AI 기반 개인화 전략</h4>
+                    <p class="text-gray-600">
+                        ChatGPT, Gemini 등 주요 AI의 응답 패턴을 분석해
+                        <span class="text-red-500 font-semibold">브랜드별 맞춤 인식 구조</span>를 설계합니다.<br>
+                        같은 업종에서도 <span class="text-red-500 font-semibold">나만의 언어로 기억되는 AI 전략</span>을 제공합니다.
+                    </p>
+                </div>
+
+                <!-- 혜택 3 -->
+                <div
+                    class="ai-card-bg p-8 rounded-2xl shadow-xl transform hover:scale-[1.02] transition duration-300 border border-gray-100">
+                    <div class="text-4xl ai-accent-text mb-4">⚡</div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-900">실시간 성과 최적화</h4>
+                    <p class="text-gray-600">
+                        AI 노출 결과를 지속적으로 모니터링하여
+                        <span class="text-red-500 font-semibold">AI 학습 변화에 즉시 대응</span>합니다.<br>
+                        이를 통해 <span class="text-red-500 font-semibold">장기적인 노출 유지력</span>과 <span
+                            class="text-red-500 font-semibold">ROI 개선</span>을 동시에 달성합니다.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 프로세스 섹션 -->
+    <section class="py-20 sm:py-28 ai-primary-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-center mb-16">
+                AIO Solution
+            </h3>
+
+            <div class="relative flex flex-col md:flex-row justify-between items-start space-y-12 md:space-y-0">
+
+                <!-- 연결선 (데스크톱 전용) -->
+                <div class="hidden md:block absolute top-10 left-0 right-0 h-1 ai-accent-bg opacity-30 mx-16"></div>
+
+                <!-- 1단계 (수정됨) -->
+                <div class="w-full md:w-1/3 text-center p-4">
+                    <div class="relative inline-block mb-4">
+                        <div
+                            class="w-16 h-16 ai-accent-bg rounded-full flex items-center justify-center text-2xl font-bold ai-primary-bg border-4 border-white shadow-lg">
+                            1</div>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 ai-accent-text">AI 기반 심층 분석</h4>
+                    <p class="text-gray-300">주요 생성형 AI 채널에서 경쟁사를 포함한 브랜드 인지 현황을 진단하고, 최신 빅데이터를 학습시켜 맞춤형 AIO 모델을
+                        구축합니다.</p>
+                </div>
+
+                <!-- 2단계 (수정됨) -->
+                <div class="w-full md:w-1/3 text-center p-4">
+                    <div class="relative inline-block mb-4">
+                        <div
+                            class="w-16 h-16 ai-accent-bg rounded-full flex items-center justify-center text-2xl font-bold ai-primary-bg border-4 border-white shadow-lg">
+                            2</div>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 ai-accent-text">AI 맞춤형 콘텐츠 최적화 </h4>
+                    <p class="text-gray-300">구축된 모델을 기반으로 AI가 선호하는 콘텐츠를 제작하고 배포하여 AI 답변 속에 브랜드가 가장 정확하고 자연스럽게
+                        인용되도록 실행합니다.</p>
+                </div>
+
+                <!-- 3단계 (수정됨) -->
+                <div class="w-full md:w-1/3 text-center p-4">
+                    <div class="relative inline-block mb-4">
+                        <div
+                            class="w-16 h-16 ai-accent-bg rounded-full flex items-center justify-center text-2xl font-bold ai-primary-bg border-4 border-white shadow-lg">
+                            3</div>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 ai-accent-text">노출 권위 강화 및 성과 확장 </h4>
+                    <p class="text-gray-300">AI 피드백과 사용자 반응을 실시간 반영하여 콘텐츠의 신뢰도와 권위를 지속적으로 향상시키고, 비즈니스 성과를 폭발적으로
+                        확장합니다.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 성과 및 신뢰 섹션 (Mockup) -->
+    <section class="py-20 sm:py-28 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+                평균 <span class="text-red-500">+250%</span>의 ROI 향상 사례
+            </h3>
+            <p class="text-lg sm:text-xl text-gray-600 mb-12">
+                AIO KOREA는 실제 기업 환경에서 검증된 AI 기반 <span class="text-red-500">성과 중심 전략</span>을 제공합니다.
+            </p>
+
+            <div class="space-y-10 sm:space-y-12">
+
+                <!-- 성공 사례 1 -->
+                <div class="bg-white p-8 sm:p-12 rounded-2xl shadow-xl border-l-4 border-r-4 border-sky-400">
+                    <p class="text-lg sm:text-xl italic text-gray-700 mb-6 leading-relaxed">
+                        “AI를 활용한 타겟팅 구조를 적용한 후, 광고 효율이 점진적으로 개선되었습니다.
+                        기존 대비 약 <span class="text-red-500">2.5배 높은 투자 효율</span>을 경험했으며,
+                        내부 데이터 관리까지 체계적으로 정비할 수 있었습니다.”
+                    </p>
+                    <p class="text-base sm:text-lg font-semibold text-gray-900">— 김OO, IT 스타트업 마케팅 </p>
+                </div>
+
+                <!-- 성공 사례 2 -->
+                <div class="bg-white p-8 sm:p-12 rounded-2xl shadow-xl border-l-4 border-r-4 border-sky-400">
+                    <p class="text-lg sm:text-xl italic text-gray-700 mb-6 leading-relaxed">
+                        “뷰티 시장의 빠른 트렌드 변화 속에서, AI 추천 노출을 통해
+                        신규 고객 유입이 약 <span class="text-red-500">40%</span> 증가했습니다.
+                        꾸준히 데이터가 반영되어, 단기 광고보다 <span class="text-red-500">지속 노출</span> 효과가 높았습니다.”
+                    </p>
+                    <p class="text-base sm:text-lg font-semibold text-gray-900">— 박OO, 뷰티 플랫폼 대표</p>
+                </div>
+
+                <!-- 성공 사례 3 -->
+                <div class="bg-white p-8 sm:p-12 rounded-2xl shadow-xl border-l-4 border-r-4 border-sky-400">
+                    <p class="text-lg sm:text-xl italic text-gray-700 mb-6 leading-relaxed">
+                        “캠페인 운영 과정에서 AI가 데이터를 분석해 효율적인 채널로 자동 분배해주면서
+                        운영 리소스가 줄고, <span class="text-red-500">순이익이 약 3배 가까이 개선</span>되었습니다.
+                        단순 홍보가 아니라 실제 <span class="text-red-500">성과 중심의 시스템</span>이라는 점이 인상 깊었습니다.”
+                    </p>
+                    <p class="text-base sm:text-lg font-semibold text-gray-900">— 이OO, 제조 솔루션 기업 재무 이사</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 최종 CTA / 연락처 섹션 -->
+    <section id="contact" class="py-20 sm:py-28 ai-primary-bg text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-4xl sm:text-5xl font-extrabold mb-6">
+                당신의 브랜드를 AI로 최적화할 준비가 되셨나요?
+            </h3>
+            <p class="text-xl mb-10 opacity-80">
+                AIO KOREA 전문가와 무료로 상담하고 맞춤형 AI 전략을 받아보세요.
+            </p>
+
+            <form class="space-y-6 max-w-lg mx-auto">
+                <input type="text" placeholder="회사명 또는 브랜드명" required
+                    class="w-full px-5 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-400">
+                <input type="email" placeholder="이메일 주소" required
+                    class="w-full px-5 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-400">
+                <textarea placeholder="문의 내용 (예: 목표 ROI, 현재 고민 등)" rows="4" required
+                    class="w-full px-5 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-400"></textarea>
+
+                <button type="submit"
+                    class="cta-button ai-accent-bg text-gray-900 font-bold text-xl w-full px-5 py-4 rounded-xl hover:bg-sky-500">
+                    무료 컨설팅 요청하기
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <!-- 네이버 서치어드바이저 해시태그 형식 노출을 위한 키워드 추가 -->
+            <div class="mb-4 text-xs text-gray-500">
+                #AIO #AI최적화 #AI브랜드전략 #네이버SEO #ChatGPT마케팅 #Gemini마케팅 #차세대마케팅
+            </div>
+            <p>&copy; 2025 AIO KOREA. All rights reserved.</p>
+            <p class="mt-2">AIO 솔루션 | 문의: contact@aio-korea.com | 전화: 02-1234-5678</p>
+            <p class="mt-4"><a href="#" class="hover:text-white transition duration-200">
+        </div>
+    </footer>
+
+    <!-- 카카오톡 오픈 채팅 퀵 버튼 -->
+    <!-- 실제 오픈 채팅방 링크로 href 속성 값을 변경해야 합니다. -->
+    <!-- 카카오톡 오픈채팅 퀵 버튼 (모바일/PC 모두) -->
+    <a href="https://open.kakao.com/o/sExampleChatLink" target="_blank" rel="noopener noreferrer" class="kakao-button fixed pointer-events-auto
+          bottom-[calc(env(safe-area-inset-bottom)+16px)]
+          right-[calc(env(safe-area-inset-right)+16px)]
+          z-[9999] p-4 rounded-full shadow-2xl flex items-center space-x-2"
+        style="box-shadow: 0 4px 20px rgba(0,0,0,0.3); transform: translateZ(0);">
+        <!-- 아이콘 -->
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M12 2C6.477 2 2 6.146 2 11c0 2.733 1.402 5.182 3.645 6.813L4.8 22.8a.6.6 0 0 0 .763.763l5.0-1.845C11.04 21.906 11.517 22 12 22c5.523 0 10-4.146 10-9s-4.477-11-10-11z" />
+        </svg>
+        <!-- 라벨: 모바일에서는 숨기고, sm 이상에서만 표시 -->
+        <span class="font-bold text-base pr-1 hidden sm:inline">카카오톡 상담</span>
+    </a>
+
+
+    <!-- 알림 메시지 (alert() 대신 사용) -->
+    <div id="message-box"
+        class="fixed top-0 left-1/2 -translate-x-1/2 mt-4 p-4 rounded-lg shadow-lg text-white bg-green-500 z-50 transition-transform duration-500 transform scale-0"
+        style="min-width: 300px;">
+        문의가 성공적으로 접수되었습니다. 곧 연락드리겠습니다!
+    </div>
+
+    <script>
+        // 폼 제출 시 메시지 박스를 보여주는 간단한 스크립트
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const messageBox = document.getElementById('message-box');
+
+            // 실제 API 호출 대신 시뮬레이션
+
+            messageBox.classList.remove('scale-0');
+            messageBox.classList.add('scale-100');
+
+            // 3초 후 메시지 숨김
+            setTimeout(() => {
+                messageBox.classList.remove('scale-100');
+                messageBox.classList.add('scale-0');
+            }, 3000);
+
+            // 폼 필드 초기화
+            e.target.reset();
+        });
+    </script>
+</body>
+
+</html>
