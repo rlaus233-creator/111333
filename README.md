@@ -1,4 +1,4 @@
-# AIO KOREA
+# AIOKOREA
 
 **South Korea–based AI Optimization Company**  
 Specializing in generative AI exposure and brand visibility enhancement.
@@ -13,7 +13,7 @@ such as ChatGPT, Gemini, and Bing Copilot.
 🔗 [https://aiokor.com](https://aiokor.com)
 
 ### 🧠 Keywords
-AI Optimization · Generative AI Exposure · Brand Visibility · AIO · ChatGPT SEO · Korean AI Company
+AI Optimization · Generative AI Exposure · Brand Visibility · AIO · ChatGPT SEO · Korean AI Company · AIOKOREA
 
 ### 📍 Based in
 Seoul, South Korea
