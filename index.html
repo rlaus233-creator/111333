@@ -1277,65 +1277,67 @@
 
 
 
-    <!-- 최종 CTA / 연락처 섹션 -->
-    <section id="contact" class="py-20 sm:py-28 ai-primary-bg text-white">
+    <!-- 최종 CTA / 연락처 섹션 (폰트 반응형 최적화 버전) -->
+    <section id="contact" class="py-16 sm:py-24 lg:py-28 ai-primary-bg text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-4xl sm:text-5xl font-extrabold mb-6">
+            <h3 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold mb-5 sm:mb-6 leading-tight">
                 당신의 브랜드를 AI로 최적화할 준비가 되셨나요?
             </h3>
-            <p class="text-xl mb-10 opacity-80">
+            <p class="text-base sm:text-lg lg:text-xl mb-8 sm:mb-10 opacity-80">
                 AIOKOR 전문가와 무료로 상담해보세요.
             </p>
 
-            <form class="space-y-6 max-w-lg mx-auto">
-                <input type="text" placeholder="회사명 또는 브랜드명" required
-                    class="w-full px-5 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-400">
-                <input type="email" placeholder="이메일 주소" required
-                    class="w-full px-5 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-400">
-                <textarea placeholder="문의 내용 (예: 목표, 현재 고민, 기대 효과 등)" rows="4" required
-                    class="w-full px-5 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-400"></textarea>
+            <form id="contact-form" class="space-y-5 sm:space-y-6 max-w-lg mx-auto"
+                action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+                <input name="company" type="text" placeholder="회사명 또는 브랜드명" required class="w-full px-4 sm:px-5 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white 
+                    placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-sky-400">
+
+                <input name="_replyto" type="email" placeholder="이메일 주소" required class="w-full px-4 sm:px-5 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white 
+                    placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-sky-400">
+
+                <textarea name="message" placeholder="문의 내용 (예: 목표, 현재 고민, 기대 효과 등)" rows="4" required
+                    class="w-full px-4 sm:px-5 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white 
+                       placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-sky-400"></textarea>
+
+                <input type="hidden" name="_subject" value="[AIOKOR 문의] 새 상담 요청">
+                <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
 
                 <button type="submit"
-                    class="cta-button ai-accent-bg text-gray-900 font-bold text-xl w-full px-5 py-4 rounded-xl hover:bg-sky-500">
+                    class="cta-button ai-accent-bg text-gray-900 font-bold text-base sm:text-lg lg:text-xl w-full px-5 py-4 rounded-xl hover:bg-sky-500 transition">
                     무료 컨설팅 요청하기
                 </button>
             </form>
         </div>
     </section>
 
-    <!-- 푸터 -->
+
+    <!-- 푸터 (그대로) -->
     <footer class="bg-gray-800 text-gray-400 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-            <!-- 네이버 서치어드바이저 해시태그 형식 노출을 위한 키워드 추가 -->
             <div class="mb-4 text-xs text-gray-500">
                 #AIO #AI최적화 #AI브랜드전략 #네이버SEO #ChatGPT마케팅 #Gemini마케팅 #차세대마케팅
             </div>
             <p>&copy; 2025 AIOKOR. All rights reserved.</p>
             <p class="mt-2">AIO 솔루션 │ AIOKOR │ 대표자: 김현 │ 사업자등록번호: 123-45-67890 │
                 주소: 서울특별시 </p>
-            <p class="mt-4"><a href="#" class="hover:text-white transition duration-200">
+            <p class="mt-4"><a href="#" class="hover:text-white transition duration-200"></a></p>
         </div>
     </footer>
 
-    <!-- 카카오톡 오픈 채팅 퀵 버튼 -->
-    <!-- 실제 오픈 채팅방 링크로 href 속성 값을 변경해야 합니다. -->
-    <!-- 카카오톡 오픈채팅 퀵 버튼 (모바일/PC 모두) -->
+    <!-- 카카오톡 오픈 채팅 퀵 버튼 (그대로) -->
     <a href="https://open.kakao.com/me/AIOKOR" target="_blank" rel="noopener noreferrer" class="kakao-button fixed pointer-events-auto
-          bottom-[calc(env(safe-area-inset-bottom)+16px)]
-          right-[calc(env(safe-area-inset-right)+16px)]
-          z-[9999] p-4 rounded-full shadow-2xl flex items-center space-x-2"
+  bottom-[calc(env(safe-area-inset-bottom)+16px)]
+  right-[calc(env(safe-area-inset-right)+16px)]
+  z-[9999] p-4 rounded-full shadow-2xl flex items-center space-x-2"
         style="box-shadow: 0 4px 20px rgba(0,0,0,0.3); transform: translateZ(0);">
-        <!-- 아이콘 -->
         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path
                 d="M12 2C6.477 2 2 6.146 2 11c0 2.733 1.402 5.182 3.645 6.813L4.8 22.8a.6.6 0 0 0 .763.763l5.0-1.845C11.04 21.906 11.517 22 12 22c5.523 0 10-4.146 10-9s-4.477-11-10-11z" />
         </svg>
-        <!-- 라벨: 모바일에서는 숨기고, sm 이상에서만 표시 -->
         <span class="font-bold text-base pr-1 hidden sm:inline">카카오톡 상담</span>
     </a>
 
-
-    <!-- 알림 메시지 (alert() 대신 사용) -->
+    <!-- 알림 메시지 (그대로) -->
     <div id="message-box"
         class="fixed top-0 left-1/2 -translate-x-1/2 mt-4 p-4 rounded-lg shadow-lg text-white bg-green-500 z-50 transition-transform duration-500 transform scale-0"
         style="min-width: 300px;">
@@ -1343,26 +1345,71 @@
     </div>
 
     <script>
-        // 폼 제출 시 메시지 박스를 보여주는 간단한 스크립트
-        document.querySelector('form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const messageBox = document.getElementById('message-box');
+        // ✅ 기존 UX 유지: 메시지 박스 사용 + Formspree로 실제 전송
+        const form = document.getElementById('contact-form');
+        const msgBox = document.getElementById('message-box');
 
-            // 실제 API 호출 대신 시뮬레이션
-
-            messageBox.classList.remove('scale-0');
-            messageBox.classList.add('scale-100');
-
-            // 3초 후 메시지 숨김
+        const showMsg = (text, ok = true) => {
+            msgBox.textContent = text;
+            msgBox.classList.remove('bg-green-500', 'bg-red-500', 'scale-0');
+            msgBox.classList.add(ok ? 'bg-green-500' : 'bg-red-500', 'scale-100');
             setTimeout(() => {
-                messageBox.classList.remove('scale-100');
-                messageBox.classList.add('scale-0');
+                msgBox.classList.remove('scale-100');
+                msgBox.classList.add('scale-0');
             }, 3000);
+        };
 
-            // 폼 필드 초기화
-            e.target.reset();
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // 허니팟 체크 (봇 차단)
+            const hp = form.querySelector('input[name="_gotcha"]');
+            if (hp && hp.value) return;
+
+            // 제출 버튼 상태 변경
+            const btn = form.querySelector('button[type="submit"]');
+            const original = btn.innerText;
+            btn.disabled = true;
+            btn.innerText = '전송 중...';
+
+            // FormData 구성
+            const data = new FormData(form);
+
+            // (선택) 제목에 회사명 반영
+            const company = data.get('company') || '';
+            data.set('_subject', `[AIOKOR 문의] ${company}`);
+
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (res.ok) {
+                    showMsg('문의가 성공적으로 접수되었습니다. 곧 연락드리겠습니다! ✅', true);
+                    form.reset();
+                } else {
+                    // Formspree가 에러 메시지를 JSON으로 줄 수 있음
+                    let msg = '전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요. ❌';
+                    try {
+                        const json = await res.json();
+                        if (json && json.errors && json.errors.length) {
+                            msg = json.errors.map(e => e.message).join(' / ');
+                        }
+                    } catch (_) { }
+                    showMsg(msg, false);
+                }
+            } catch (err) {
+                console.error(err);
+                showMsg('네트워크 오류가 발생했습니다. 연결을 확인해주세요. ❌', false);
+            } finally {
+                btn.disabled = false;
+                btn.innerText = original;
+            }
         });
     </script>
+
 </body>
 
 </html>
