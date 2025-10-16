@@ -1,4 +1,4 @@
-# AIOKOREA
+# AIOKOR
 
 **South Korea–based AI Optimization Company**  
 Specializing in generative AI exposure and brand visibility enhancement.
@@ -20,5 +20,5 @@ Seoul, South Korea
 
 ---
 
-> © 2025 AIO KOREA. All rights reserved.
+> © 2025 AIOKOR. All rights reserved.
 > Improving brand visibility in the age of AI.
