@@ -3,7 +3,7 @@
 **South Korea–based AI Optimization Company**  
 Specializing in generative AI exposure and brand visibility enhancement.
 
-AIO KOREA develops **AIO (Artificial Intelligence Optimization)** solutions  
+AIOKOR develops **AIO (Artificial Intelligence Optimization)** solutions  
 to help brands appear more frequently and accurately within AI-driven platforms  
 such as ChatGPT, Gemini, and Bing Copilot.
 
