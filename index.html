@@ -175,13 +175,75 @@
             <div class="md:col-span-6">
                 <div class="relative overflow-hidden rounded-3xl opacity-0 translate-y-4 transition-all duration-700 reveal"
                     data-delay="60">
-                    <video class="block w-full h-full object-cover rounded-3xl border-0 outline-none ring-0 shadow-none"
-                        autoplay muted loop playsinline preload="metadata" webkit-playsinline
-                        poster="/images/video-poster-1920x1080.jpg" style="box-shadow:none;">
-                        <source src="videos/aio-intro-1920x1080.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                    <video class="block w-full h-auto object-cover rounded-3xl border-0 outline-none ring-0 shadow-none"
+                        autoplay muted loop playsinline webkit-playsinline preload="metadata"
+                        poster="images/video-poster-1920x1080.jpg" id="aio-intro-video" style="box-shadow:none;"
+                        controlslist="nodownload noplaybackrate" disablepictureinpicture>
+                        <!-- iOS 호환을 위해 우선 단순 선언. (코덱 문자열은 제거) -->
+                        <source src="videos/aio-intro-1920x1080.mp4" type="video/mp4">
+                        <!-- 필요하면 WebM 추가 (iOS는 무시, 데스크톱 크롬/파폭용) -->
+                        <!-- <source src="/videos/aio-intro-1920x1080.webm" type="video/webm"> -->
                     </video>
                 </div>
             </div>
+
+            <script>
+                (function () {
+                    const wrap = document.querySelector('.reveal');
+                    const video = document.getElementById('aio-intro-video');
+                    if (!wrap || !video) return;
+
+                    // iOS 확실히: 속성 + 프로퍼티 동시 설정
+                    video.muted = true;
+                    video.playsInline = true;       // 표준
+                    video.setAttribute('playsinline', ''); // 사파리
+                    video.setAttribute('webkit-playsinline', '');
+
+                    // 뷰포트에 들어오면 재생 시도 (초기 opacity:0 상태에서 시도된 자동재생 실패를 복구)
+                    const onVisible = (entries) => {
+                        entries.forEach((e) => {
+                            if (e.isIntersecting) {
+                                // 가끔 iOS 첫 프레임이 검게 나올 때 0.001초로 점프
+                                const tryStart = () => {
+                                    if (video.currentTime === 0) {
+                                        try { video.currentTime = 0.001; } catch (e) { }
+                                    }
+                                    const p = video.play();
+                                    if (p && typeof p.then === 'function') {
+                                        p.catch(() => { video.controls = true; }); // 정책으로 막히면 컨트롤 노출
+                                    }
+                                };
+
+                                // reveal 애니메이션 끝나고 play()
+                                const delay = parseInt(wrap.getAttribute('data-delay') || '0', 10);
+                                setTimeout(() => {
+                                    wrap.classList.remove('opacity-0', 'translate-y-4');
+                                    tryStart();
+                                }, delay);
+
+                            }
+                        });
+                    };
+
+                    const io = new IntersectionObserver(onVisible, { threshold: 0.3 });
+                    io.observe(wrap);
+
+                    // 탭 전환/회전 등 상태 변화 시 재시도
+                    document.addEventListener('visibilitychange', () => {
+                        if (document.visibilityState === 'visible' && video.paused) {
+                            const p = video.play();
+                            if (p && typeof p.then === 'function') p.catch(() => { video.controls = true; });
+                        }
+                    });
+                    window.addEventListener('orientationchange', () => {
+                        if (video.paused) {
+                            const p = video.play();
+                            if (p && typeof p.then === 'function') p.catch(() => { video.controls = true; });
+                        }
+                    });
+                })();
+            </script>
+
 
         </div>
     </section>
@@ -1016,6 +1078,52 @@
                 AI가 브랜드를 <span class="font-semibold text-white">먼저 인식하고 추천</span>하도록 설계된 3단계 전략
             </p>
 
+            <!-- ▼▼▼ 동영상 블록 (플러그인 필요 없음) ▼▼▼ -->
+            <div class="mt-8 sm:mt-10">
+                <div
+                    class="mx-auto max-w-5xl rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black/40">
+                    <!-- 16:9 비율 래퍼 (padding-top 해크) -->
+                    <div class="relative w-full" style="padding-top:56.25%;">
+                        <video class="absolute inset-0 w-full h-full object-cover" muted autoplay loop playsinline
+                            webkit-playsinline preload="metadata" poster="/videos/poster.jpg">
+                            <!-- 가능하면 webm + mp4 함께 제공 -->
+
+                            <source src="videos/aiokor-demo.mp4" type="video/mp4">
+                            <a href="videos/aiokor-demo.mp4" class="inline-block p-6 text-white/80">동영상을 재생하려면 여기를
+                                클릭하세요.</a>
+                        </video>
+                    </div>
+                </div>
+
+                <!-- 자동재생 실패 시 컨트롤 노출 (브라우저 정책 대응) -->
+                <script>
+                    (function () {
+                        const wrapper = document.currentScript.previousElementSibling;
+                        const video = wrapper && wrapper.querySelector('video');
+                        if (!video) return;
+
+                        function tryPlay() {
+                            const p = video.play();
+                            if (p && typeof p.then === 'function') {
+                                p.catch(() => { video.controls = true; });
+                            }
+                        }
+
+                        if (document.visibilityState === 'visible') {
+                            tryPlay();
+                        } else {
+                            document.addEventListener('visibilitychange', function once() {
+                                if (document.visibilityState === 'visible') {
+                                    tryPlay();
+                                    document.removeEventListener('visibilitychange', once);
+                                }
+                            });
+                        }
+                    })();
+                </script>
+            </div>
+            <!-- ▲▲▲ 동영상 블록 끝 ▲▲▲ -->
+
             <!-- 3단 구조 -->
             <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 
@@ -1029,8 +1137,7 @@
                         <h4 class="text-xl font-bold mt-0 md:mt-4">Discover</h4>
                     </div>
                     <p class="mt-4 text-sm text-white/80 leading-relaxed">
-                        브랜드의 현재 AI 인식 상태를 분석하고
-                        핵심 인지 포인트를 찾아냅니다.
+                        브랜드의 현재 AI 인식 상태를 분석하고 핵심 인지 포인트를 찾아냅니다.
                     </p>
                 </article>
 
@@ -1044,8 +1151,7 @@
                         <h4 class="text-xl font-bold mt-0 md:mt-4">Optimize</h4>
                     </div>
                     <p class="mt-4 text-sm text-white/80 leading-relaxed">
-                        AI가 이해하기 쉬운 구조로
-                        브랜드의 존재감을 강화합니다.
+                        AI가 이해하기 쉬운 구조로 브랜드의 존재감을 강화합니다.
                     </p>
                 </article>
 
@@ -1059,8 +1165,7 @@
                         <h4 class="text-xl font-bold mt-0 md:mt-4">Amplify</h4>
                     </div>
                     <p class="mt-4 text-sm text-white/80 leading-relaxed">
-                        AI 검색과 대화형 추천에서
-                        자연스럽게 브랜드가 언급되도록 확장합니다.
+                        AI 검색과 대화형 추천에서 자연스럽게 브랜드가 언급되도록 확장합니다.
                     </p>
                 </article>
 
@@ -1078,8 +1183,10 @@
                     </svg>
                 </a>
             </div>
+
         </div>
     </section>
+
 
 
 
